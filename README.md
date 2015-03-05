@@ -5,7 +5,7 @@
 	* make ARCH=arm am3352_som_defconfig
 3. Make kernel image and DTS
 	* make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- -j4 zImage dtbs
-4.Make Modules && Make modules install
+4. Make Modules && Make modules install
  	* make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- -j4 INSTALL_MOD_PATH=out modules
  	* make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- -j4 INSTALL_MOD_PATH=out modules_install
  
