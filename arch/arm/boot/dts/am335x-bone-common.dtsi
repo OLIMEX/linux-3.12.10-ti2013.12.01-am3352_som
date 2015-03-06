@@ -49,6 +49,20 @@
 				0x174 (PIN_OUTPUT_PULLDOWN | MUX_MODE0)		/* uart0_txd.uart0_txd */
 			>;
 		};
+		
+		uart1_pins: pinmux_uart1_pins {
+			pinctrl-single,pins = <
+				0x168 (PIN_INPUT_PULLUP | MUX_MODE1)
+				0x16c (PIN_OUTPUT_PULLDOWN | MUX_MODE1)
+			>;
+		};
+		
+		uart4_pins: pinmux_uart4_pins {
+			pinctrl-single,pins = <
+				0x180 (PIN_INPUT_PULLUP | MUX_MODE0)
+				0x184 (PIN_OUTPUT_PULLDOWN | MUX_MODE0)
+			>;
+		};
 
 
 
@@ -218,9 +232,15 @@
 			status = "okay";
 		};
 	 	uart1: serial@48022000 {
-
+			pinctrl-names = "default";
+			pinctrl-0 = <&uart1_pins>;
 			status = "okay";
 
+		};
+		uart4: serial@481a8000 {
+			pinctrl-names = "default";
+			pinctrl-0 = <&uart4_pins>;
+			status = "okay";
 		};
 	 epwmss0: epwmss@48300000 {
                         status = "okay";
@@ -331,7 +351,7 @@
 
 	backlight {
                 compatible = "pwm-backlight";
-                pwms = <&ecap0 0 50000 0>;
+                pwms = <&ecap0 0 50000 1>;
                 brightness-levels = <0 51 53 56 62 75 101 152 255>;
                 default-brightness-level = <8>;
         };
