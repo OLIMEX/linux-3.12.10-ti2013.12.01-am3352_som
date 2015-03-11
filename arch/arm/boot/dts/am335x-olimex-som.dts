@@ -161,7 +161,7 @@
 			hback-porch = <88>;
 			vfront-porch = <1>;
 			vback-porch = <23>;
-			hsync-len = <128>;				//pulse-width?
+			hsync-len = <128>;				
 			vsync-len = <4>;
 			hsync-active = <0>;
 			vsync-active = <0>;
