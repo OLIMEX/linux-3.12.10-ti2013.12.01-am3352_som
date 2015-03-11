@@ -270,7 +270,7 @@
 
 			usb@47401000 {
 				status = "okay";
-				dr_mode = "otg";	
+				dr_mode = "host";	
 			};
 
 			usb@47401800 {
