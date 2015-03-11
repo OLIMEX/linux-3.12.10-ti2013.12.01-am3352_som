@@ -287,7 +287,7 @@
 			pinctrl-names = "default";
 			pinctrl-0 = <&i2c0_pins>;
 			status = "okay";
-			clock-frequency = <400000>;
+			clock-frequency = <100000>;
 
 
 			tps: tps@24 {
